@@ -132,6 +132,19 @@ h1 {
 
 .sec button {
     margin: 2em;
+    
+}
+
+.learn-button{
+    background: var(--main-color); 
+    color: white;
+    border-radius: 30px;
+    padding: 1em 2em;
+    cursor: pointer;
+    
+    
+
+
 }
 
 /***************************Footer******************/
