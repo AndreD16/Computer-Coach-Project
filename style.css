@@ -23,10 +23,6 @@ li {
     list-style: none;
 }
 
-a {
-    color: white;
-    text-decoration: none;
-}
 
 .nav-bar {
     min-height: 70px;
@@ -47,9 +43,15 @@ a {
 .nav-icon {
     font-size: 2rem;
 }
-
-.nav-link {
+.nav-link-head {
     transition: 0.7s ease;
+    color: white;
+    text-decoration: none;
+}
+.nav-link {
+
+    color: rgb(0, 0, 0);
+    text-decoration: none;
 }
 .nav-link:hover {
     color: dodgerblue;
@@ -82,10 +84,11 @@ body {
     flex-direction:column ;
     justify-content: center;
     align-items: center;
+
 }
 
 .hero-image h1 {
-font-family: 'noto serif';
+    background-image: url(https://images.pexels.com/photos/7988079/pexels-photo-7988079.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
 }
 .cta {
     background-color: #0077B6;
@@ -117,13 +120,6 @@ footer :nth-child(4) {
     font-size: 1rem;
 }
 
-.mystyle {
-    width: 100%;
-    padding: 25px;
-    background-color: coral;
-    color: white;
-    font-size: 25px;
-  }
 
 @media(max-width:768px){
     .hamburger {
