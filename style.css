@@ -108,7 +108,14 @@ h1 {
 }
 
 
-/***************************Footer******************/
+/***************************info******************/
+
+.sec {
+    display: flex;
+    flex-direction: column;
+    width: 50vh;
+    height: auto;
+}
 
 /***************************Footer******************/
 
@@ -134,6 +141,7 @@ footer :nth-child(4) {
     padding: 0.5rem;
     font-size: 1rem;
     color:black;
+    font-size-adjust: 15px;
 }
 
 .icon {
