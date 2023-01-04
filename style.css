@@ -117,6 +117,7 @@ h1 {
     flex-direction: column;
     width: 50%;
     height: auto;
+    background-color: var(--mid0blue);
 }
 
 
