@@ -102,7 +102,7 @@ body {
     cursor: pointer;
 }
 
-.cta:hover
+
 /***************************Footer******************/
 
 /***************************Footer******************/
@@ -116,6 +116,7 @@ footer {
 }
 
 footer > * {
+
     justify-content: center;
     text-align: center;
     padding: 0.5rem 0;
@@ -133,7 +134,7 @@ footer :nth-child(4) {
 .icon {
     height: 20px;
     width: auto;
-    align-items:
+
 }
 
 
