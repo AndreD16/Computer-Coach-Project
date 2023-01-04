@@ -84,16 +84,25 @@ body {
     flex-direction:column ;
     justify-content: center;
     align-items: center;
+    gap: 3em;
 
 }
 
 .hero-image h1 {
-    background-image: url(https://images.pexels.com/photos/7988079/pexels-photo-7988079.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-image: url(https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    
+    filter: blur(1);
+    padding: 0.5em;
 }
 .cta {
-    background-color: #0077B6;
+    background: linear-gradient(90deg, hsla(216, 96%, 56%, 1) 0%, hsla(178, 64%, 65%, 1) 100%);
     display: flex;
+    border-radius: 20%;
+    padding: 1em 2em;
+    cursor: pointer;
 }
+
+.cta:hover
 /***************************Footer******************/
 
 /***************************Footer******************/
@@ -103,7 +112,6 @@ footer {
     justify-content: space-around;
     background-color: #CAF0F8;
     color: black;
-
     
 }
 
@@ -127,6 +135,8 @@ footer :nth-child(4) {
     width: auto;
     align-items:
 }
+
+
 
 @media(max-width:768px){
     .hamburger {
