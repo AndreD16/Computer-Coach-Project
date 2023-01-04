@@ -111,7 +111,6 @@ footer > * {
     justify-content: center;
     text-align: center;
     padding: 0.5rem 0;
-    border-right: 3px solid black;
     color: black;
 }
 footer :nth-child(4) {
@@ -123,6 +122,11 @@ footer :nth-child(4) {
     color:black;
 }
 
+.icon {
+    height: 20px;
+    width: auto;
+    align-items:
+}
 
 @media(max-width:768px){
     .hamburger {
