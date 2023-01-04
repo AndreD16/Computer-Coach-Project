@@ -1,6 +1,9 @@
 :root {
     --bg-color: #c3c3c3;
     --main-color: #263374;
+    --darkblue: #0077B6;
+    --mid0blue: #00B4D8;
+    --light-blue: #CAF0F8;
 }
 * {
     padding: 0;
@@ -8,7 +11,7 @@
     box-sizing: border-box;
     font-size: 16px;
 }
-
+/***************************Header******************/
 header {
     background-color: var(--main-color);
     width: 100%;
@@ -66,10 +69,32 @@ a {
     transition: all 0.3s ease-in-out;
     background-color: white;
 }
-
+/***************************body******************/
 body {
     background-color: var(--bg-color);
 }
+
+/***************************Hero Image******************/
+.hero-image {
+    background-image: url(https://images.pexels.com/photos/7988079/pexels-photo-7988079.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    height: 80vh;
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image h1 {
+font-family: 'noto serif';
+}
+.cta {
+    background-color: #0077B6;
+    display: flex;
+}
+/***************************Footer******************/
+
+/***************************Footer******************/
+
 footer {
     display: flex;
     justify-content: space-around;
