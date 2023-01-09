@@ -252,13 +252,34 @@ section p {
   }
 
   /**************************Reviews****************/
-form {
+.h3
+{
+    display: flex-end;
+    align-items: center;
+    justify-content: center;
+}
+
+  .big-photo {
+    margin-left: 1em;
+    border-radius: 50%;
+}
+
+
+
+  form {
     padding: 1em;
     margin: 1em;
     display: flex;
     align-items: center;
 }
 
+.email {
+display: flex-end;
+align-items: right;
+justify-content: center;
+
+
+}
 /***************************Footer******************/
 
 footer {
