@@ -251,6 +251,13 @@ section p {
     }
   }
 
+  /**************************Reviews****************/
+form {
+    padding: 1em;
+    margin: 1em;
+    display: flex;
+    align-items: center;
+}
 
 /***************************Footer******************/
 
