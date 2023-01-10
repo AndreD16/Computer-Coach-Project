@@ -252,16 +252,13 @@ section p {
   }
 
   /**************************Reviews****************/
-.h3
-{
-    display: flex-end;
-    align-items: center;
-    justify-content: center;
+.h6 {
+    text-align: center;
 }
 
   .big-photo {
     margin-left: 1em;
-    border-radius: 50%;
+    border-radius: 30px;
 }
 
 
