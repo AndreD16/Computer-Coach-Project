@@ -145,7 +145,7 @@ section p {
     color: black;
 }
 
-.cards {
+.cards-c {
     height: 200px;
     padding: 20px;
     background-color: #0077B6;
@@ -217,7 +217,7 @@ section p {
 **/
 .courses-wrapper {
     display: flex;
-    flex-wrap: wrap;
+
     justify-content: space-between;
     margin: 0 40px;
   }
@@ -230,14 +230,10 @@ section p {
     transition: 0.3s;
   }
 
-  .courses:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  }
-
   .courses img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 50px;
+
   }
   .courses-split {
     display: flex;
@@ -254,7 +250,7 @@ section p {
 
 
   @media only screen and (max-width: 600px) {
-    .courses {
+    .cards {
       width: calc(50% - 20px);
     }
   }
@@ -265,7 +261,88 @@ section p {
     }
   }
 
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: calc(35% - 20px);
+    padding: 20px;
+    border: 1px solid black;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .card-header {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+  .card .image {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+  }
+  .card .description {
+    font-size: 16px;
+    margin-top: 10px;
+
+
+  }
+
   /**************************Reviews****************/
+  #reviews {
+    display: flex;
+    align-items: center;
+  }
+  
+  #review-text {
+    width: 50%;
+    text-align: center;
+  }
+  
+  #review-image {
+    width: 50%;
+  }
+  
+  #small-images {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-top: 20px;
+  }
+  
+  #small-images img {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    align-items: center;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
 .h6 {
     text-align: center;
 }
@@ -308,9 +385,7 @@ footer > * {
     padding: 0.5rem 0;
     color: black;
 }
-footer :nth-child(4) {
-    border: 0;
-}
+
 .nav-footer {
     padding: 0.5rem;
     font-size: 1rem;
