@@ -16,6 +16,9 @@
 header {
     background-color: var(--main-color);
     width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
     
     
 }
@@ -31,6 +34,7 @@ li {
     justify-content: space-between;
     align-items: center;
     padding: 0 24px;
+    
 
 }
 
@@ -49,6 +53,11 @@ li {
     color: white;
     text-decoration: none;
 }
+
+.nav-link-head:hover {
+    color: dodgerblue;
+}
+
 .nav-link {
 
     color: rgb(0, 0, 0);
@@ -72,6 +81,8 @@ li {
     transition: all 0.3s ease-in-out;
     background-color: white;
 }
+
+
 /***************************body******************/
 body {
     background-color: var(--bg-color);
@@ -83,14 +94,20 @@ h1 {
 
 /***************************Hero Image******************/
 .hero-image {
-    background-image: url(https://images.pexels.com/photos/7988079/pexels-photo-7988079.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-    height: 80vh;
+    background-image: url(https://images.unsplash.com/photo-1452830978618-d6feae7d0ffa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    height: 60vh;
     display: flex;
     flex-direction:column ;
     justify-content: center;
     align-items: center;
     gap: 3em;
+
 }
+
 .glass {
 background: linear-gradient(
     135deg,
@@ -100,7 +117,7 @@ rgba(255, 255, 255, 0.1)
 -webkit-backdrop-filter: blur(21px);
 backdrop-filter: blur(21px);
 box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
-border-radius: 24px;
+border-radius: 25px;
 padding: 24px;
 }
 
@@ -112,23 +129,26 @@ padding: 24px;
 }
 .cta {
     background: linear-gradient(90deg, hsla(216, 96%, 56%, 1) 0%, hsla(178, 64%, 65%, 1) 100%);
-    display: flex;
-    border-radius: 20%;
-    padding: 1em 2em;
+    border-radius: 15px;
+    padding: 10px 25px;    
     cursor: pointer;
-}
-/***************************section 1******************/
-.description{
-    padding: 2em;
-}
-
-section h1 {
-    text-align: center;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
 }
 
-section p {
-    padding: 0 100px;
-}
+
+@media only screen and (min-width: 950px) {
+    .hero-image h1 {
+font-size: 2em;
+    }
+    .cta {
+        font-size: 1.2em;
+    }
+  }
 
 
 /**************************certifications***********************/
@@ -146,19 +166,42 @@ section p {
 }
 
 .cards-c {
+    width: clamp(150px, 300px, 400px);
     height: 200px;
     padding: 20px;
     background-color: #0077B6;
     border-radius: 20px;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all .5s cubic-bezier(1,-0.99,.14,1.8);
+    outline: solid 0px white;
+}
 
+.cards-c:hover {
+    outline: solid 5px white;
+    scale: (0.9);
+}
 
+.cards-c image {
+    align-items: center;
 }
 
 .wrapper h3 {
-    font-size: 0.7em;
+    font-size: clamp(0.7em, 1.5em, 2em);
     text-align: center;
 }
+
+
+@media only screen and (max-width: 950px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        
+    }
+  }
 
 /***************************info******************/
 
@@ -173,10 +216,12 @@ section p {
 }
 
 .sec h2 {
+    font-size: clamp(0.7em, 1.4em, 3em);
     margin: 1em;
 }
 
 .sec p {
+
     margin: 1em;
 }
 .info-wrapper {
@@ -195,81 +240,78 @@ section p {
     border-radius: 30px;
     padding: 1em 2em;
     cursor: pointer;
-    
-    
-
-
+    text-decoration: none;
 }
+.sec img {
+    width: clamp(50%, 100%, 300%);
+    object-fit: cover;
+}
+@media only screen and (min-width: 950px) {
+    .sec h2 {
+        font-size: clamp(0.7em, 2.3em, 3em);
+        margin: 1em;
+    }
+
+    .sec p {
+        font-size: clamp(0.7em, 1.5em, 3em);
+        margin: 0 2em;
+    }
+  }
+
+@media only screen and (max-width: 950px) {
+    .sec {
+width: 100%;
+    }
+    .info-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+  }
+
+
+
+
 /***************************Courses******************/
-/**
+
 .courses-wrapper {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 50px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(100% - 10rem);
+    overflow-x: scroll;
+    overscroll-behavior-inline: contain;
+    gap: 2em;
 }
-
-.courses {
-    background: linear-gradient(145deg,#6f7bf7, #9bf8f4);
-    border: 1px solid black;
-    
-}
-**/
-.courses-wrapper {
-    display: flex;
-
-    justify-content: space-between;
-    margin: 0 40px;
-  }
-
-  .courses {
-    width: calc(25% - 20px);
-    height: 200px;
-    margin: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-  }
-
-  .courses img {
-    width: 100%;
-    height: 50px;
-
-  }
-  .courses-split {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-  }
-
-  .courses-image {
-    width: 50px;
-    height: 50px;
-  }
-
-
-
-  @media only screen and (max-width: 600px) {
-    .cards {
-      width: calc(50% - 20px);
-    }
-  }
-
-  @media only screen and (max-width: 400px) {
-    .courses {
-      width: 100%;
-    }
-  }
-
   .card {
+    background-color: #263374;
+    color: azure;
     display: flex;
     flex-direction: column;
-    width: calc(35% - 20px);
-    padding: 20px;
+    justify-content: space-between;
+    inline-size: min(100%, 70rem);
+    
+    max-height: 500px;
+    padding: 2em;
+
     border: 1px solid black;
     margin: 10px;
+
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
+    cursor: pointer;
+
+  }
+
+  .card a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+  }
+
+  .card a:hover {
+    text-decoration: underline;
+
+    color: rgb(0, 0, 0);
+
   }
 
   .card:hover {
@@ -279,69 +321,65 @@ section p {
   .card-header {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .card .title {
     font-size: 24px;
     font-weight: bold;
-    margin-right: 20px;
+
   }
   .card .image {
     width: 50px;
     height: 50px;
     border-radius: 25px;
   }
-  .card .description {
+  .card p {
     font-size: 16px;
     margin-top: 10px;
-
-
   }
+
+  .snaps-inline {
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 20px;
+  }
+
+  .snaps-inline > * {
+    scroll-snap-align: center;
+  }
+
+  @media only screen and (min-width: 800px) {
+    .courses-wrapper {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+    .card {
+        width: calc(25% - 20px);
+        height: min(270px);
+        padding: 20px;
+    }
+  }
+
+
 
   /**************************Reviews****************/
-  #reviews {
+.reviews{
     display: flex;
-    align-items: center;
-  }
-  
-  #review-text {
+    justify-content: center;
+}
+.big-photo {
     width: 50%;
-    text-align: center;
-  }
-  
-  #review-image {
-    width: 50%;
-  }
-  
-  #small-images {
-    display: flex;
-    justify-content: space-between;
-    width: 50%;
-    margin-top: 20px;
-  }
-  
-  #small-images img {
-    width: 30px;
-    height: 30px;
-    border: 2px solid #ccc;
+}
+.big-photo img {
     border-radius: 50%;
-    cursor: pointer;
-  }
+}
 
-  .column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-    align-items: center;
-  }
 
-  .row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-  }
+.right-side {
+    border: 1px solid red;
+}
 
 .h6 {
     text-align: center;
@@ -385,7 +423,9 @@ footer > * {
     padding: 0.5rem 0;
     color: black;
 }
-
+footer :nth-child(4) {
+    border: 0;
+}
 .nav-footer {
     padding: 0.5rem;
     font-size: 1rem;
@@ -398,6 +438,12 @@ footer > * {
     width: auto;
 
 }
+@media only screen and (max-width: 800px) {
+    footer {
+        display: block;
+        
+    }
+  }
 
 
 
