@@ -386,7 +386,6 @@ width: 100%;
 
 .reviews-wrapper{
     display: flex;
-
 }
 .big-photo {
     width: 50%;
@@ -435,19 +434,20 @@ display: block;
     border-radius: 30px;
 }
 
-
-
-  form {
-    padding: 1em;
-    margin: 1em;
-    display: flex;
-    align-items: center;
+h2 {
+    text-align: center;
 }
 
 .email {
-display: flex-end;
-align-items: right;
-justify-content: center;
+width: 50%;
+height: 50%;
+padding: 15px;
+margin: 10px;
+font-size: 60px;
+position:relative;
+top: 1px;
+left: 1200px;
+
 
 
 }
@@ -460,7 +460,8 @@ footer {
 background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-    color: black;
+    color: black
+    ;
     
 }
 
