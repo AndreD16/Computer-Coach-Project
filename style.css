@@ -266,13 +266,31 @@ section p {
   }
 
   /**************************Reviews****************/
-form {
+.h6 {
+    text-align: center;
+}
+
+  .big-photo {
+    margin-left: 1em;
+    border-radius: 30px;
+}
+
+
+
+  form {
     padding: 1em;
     margin: 1em;
     display: flex;
     align-items: center;
 }
 
+.email {
+display: flex-end;
+align-items: right;
+justify-content: center;
+
+
+}
 /***************************Footer******************/
 
 footer {
