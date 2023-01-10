@@ -59,7 +59,7 @@ li {
 }
 
 .nav-link-head:hover {
-    color: dodgerblue;
+    color: #c89b65;
 }
 
 .nav-link {
@@ -68,7 +68,7 @@ li {
     text-decoration: none;
 }
 .nav-link:hover {
-    color: dodgerblue;
+    color: #c89b65;
 }
 
 .hamburger {
@@ -89,7 +89,12 @@ li {
 
 /***************************body******************/
 body {
-    background-color: var(--bg-color);
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
+
 }
 
 h1 {
@@ -180,11 +185,11 @@ font-size: 2em;
     flex-direction: column;
     align-items: center;
     transition: all .5s cubic-bezier(1,-0.99,.14,1.8);
-    outline: solid 0px white;
+    outline: solid 0px #c89b65;
 }
 
 .cards-c:hover {
-    outline: solid 5px white;
+    outline: solid 5px #c89b65;
     scale: (0.9);
 }
 
@@ -281,7 +286,7 @@ width: 100%;
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: calc(100% - 10rem);
-    overflow-x: scroll;
+
     overscroll-behavior-inline: contain;
     gap: 2em;
 }
@@ -335,8 +340,8 @@ width: 100%;
 
   }
   .card .image {
-    width: 50px;
-    height: 50px;
+    width: clamp(50px, 75px, 100px);
+    height: auto;
     border-radius: 25px;
   }
   .card p {
@@ -365,25 +370,61 @@ width: 100%;
         padding: 20px;
     }
   }
-
-
-
+  @media only screen and (max-width: 800px) {
+    .courses-wrapper {
+  overflow-x: scroll;
+}  }
   /**************************Reviews****************/
-.reviews{
+  .reviews {
+    margin: 2em;
+  }
+
+  .reviews h2 {
+    text-align: center;
+    font-size: 3em;
+  }
+
+.reviews-wrapper{
     display: flex;
-    justify-content: center;
+
 }
 .big-photo {
     width: 50%;
+    display: grid;
+    place-items: center;
+
 }
 .big-photo img {
     border-radius: 50%;
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
 }
 
+.small-photo img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.right {
+display: grid;
+place-items: center;
+
+}
 
 .right-side {
-    border: 1px solid red;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    gap: 4em;
+
 }
+
+@media only screen and (max-width: 800px) {
+    .reviews-wrapper {
+display: block;
+}  }
 
 .h6 {
     text-align: center;
