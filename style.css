@@ -439,7 +439,7 @@ h2 {
 }
 
 .email-sub {
-width: 50%;
+width: 28%;
 height: auto;
 padding: 15px;
 margin: 10px;
@@ -447,6 +447,8 @@ font-size: 80px;
 position: relative;
 top: 1px;
 left: 1200px;
+box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+border-radius: 25px;
 }
 
 #send-btn {
@@ -460,6 +462,18 @@ left: 1200px;
 
     
 
+}
+
+label {
+    font-size: 20px;
+    padding: 1.5em;
+}
+
+input{
+    font-size: 20px;
+    border: 0px;
+    padding: 5px;
+    
 }
 /***************************Footer******************/
 
